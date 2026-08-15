@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8edeb" />
+    <title>Playful Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="site-header"><a href="#" class="logo" aria-label="Tic Tac Toe home">tic <span>♥</span> toe</a><button id="openSetup" class="header-button">Players</button></header>
+      <section class="setup-panel" id="setupPanel" aria-labelledby="setupTitle">
+        <p class="overline">GAME SETUP</p><h1 id="setupTitle">Who’s playing?</h1><p class="intro">Choose two or three players, then give everyone their favorite marker.</p>
+        <div class="count-choice" role="group" aria-label="Number of players"><button class="count-button selected" data-count="2">2 players</button><button class="count-button" data-count="3">3 players</button></div>
+        <div class="player-choices" id="playerChoices"></div><p class="marker-help">A faded marker is already taken by another player.</p><p class="form-message" id="formMessage" aria-live="polite"></p><button class="start-button" id="startGame">Start game <span>→</span></button>
+      </section>
+      <section class="game-panel hidden" id="gamePanel" aria-labelledby="gameTitle">
+        <div class="game-heading"><div><p class="overline">LET’S PLAY</p><h1 id="gameTitle">Tic tac toe!</h1></div><button id="restartMatch" class="soft-button">New match</button></div>
+        <div class="turn-banner" id="turnBanner" aria-live="polite"></div>
+        <div class="game-layout"><div class="board" id="board" role="grid" aria-label="Tic Tac Toe board"><button class="cell" role="gridcell" aria-label="Top left"></button><button class="cell" role="gridcell" aria-label="Top center"></button><button class="cell" role="gridcell" aria-label="Top right"></button><button class="cell" role="gridcell" aria-label="Middle left"></button><button class="cell" role="gridcell" aria-label="Middle center"></button><button class="cell" role="gridcell" aria-label="Middle right"></button><button class="cell" role="gridcell" aria-label="Bottom left"></button><button class="cell" role="gridcell" aria-label="Bottom center"></button><button class="cell" role="gridcell" aria-label="Bottom right"></button></div><aside class="scores-panel"><p class="score-title">SCOREBOARD</p><div id="scoreboard" class="scoreboard"></div><button class="round-button" id="newRound">Play next round <span>→</span></button></aside></div>
+        <p class="game-note">Get three matching markers in a row to win.</p>
+      </section>
+    </main><script src="app.js"></script>
+  </body>
+</html>
